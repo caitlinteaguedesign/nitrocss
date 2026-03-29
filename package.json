@@ -1,0 +1,28 @@
+{
+  "name": "nitrocss",
+  "version": "2.1.0",
+  "description": "CSS framework",
+  "homepage": "https://github.com/caitlinteaguedesign/nitrocss#readme",
+  "bugs": {
+    "url": "https://github.com/caitlinteaguedesign/nitrocss/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caitlinteaguedesign/nitrocss.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "prettier-plugin-jinja-template": "^2.1.0",
+    "sass": "^1.98.0",
+    "vite": "^8.0.3",
+    "vite-plugin-nunjucks": "^0.2.0"
+  }
+}
