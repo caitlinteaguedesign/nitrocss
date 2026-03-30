@@ -14,8 +14,15 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "allowJs": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@assets/*": ["src/assets/*"]
+    }
   },
   "exclude": ["dist"],
-  "include": ["src/.astro/types.d.ts", "src/**/*"]
+  "include": [".astro/types.d.ts", "src/**/*"]
 }
