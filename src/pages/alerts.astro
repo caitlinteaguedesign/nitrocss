@@ -1,0 +1,105 @@
+---
+import SiteLayout from "@layouts/SiteLayout.astro";
+import { SITE_TITLE } from "../consts.ts";
+---
+
+<SiteLayout title={`Alerts | ${SITE_TITLE}`}>
+  <h1 class="heading-1">Alerts</h1>
+
+  <p class="paragraph">
+    Place <b>.alert</b> on the element to create the shape of an alert. Alert headings
+    are optional. To add a heading, use <b>.alert_heading</b> on a child <b
+      >&lt;h#&gt;</b
+    >.
+  </p>
+
+  <div class="grid">
+    <div class="column_6">
+      <p class="paragraph"><b>.alert_info</b></p>
+      <div class="alert alert_info">
+        <h2 class="alert__heading">a simple note</h2>
+        <p>A simple message</p>
+      </div>
+    </div>
+
+    <pre
+      class="code-block column_6 code-snippet"><code class="html">&lt;div class="alert alert_info"&gt;
+	&lt;h2 class="alert__heading"&gt;no worries&lt;/h2&gt;
+	&lt;p&gt;A simple message&lt;/p&gt;
+&lt;/div&gt;	
+</code></pre>
+
+    <div class="column_6">
+      <p class="paragraph"><b>.alert_caution</b></p>
+      <div class="alert alert_caution">
+        <h2 class="alert__heading">ah oh</h2>
+        <p>Tread lightly</p>
+      </div>
+    </div>
+    <pre
+      class="code-block column_6 code-snippet"><code class="html">&lt;div class="alert alert_caution"&gt;
+	&lt;h2 class="alert__heading"&gt;no worries&lt;/h2&gt;
+	&lt;p&gt;Tread lightly&lt;/p&gt;
+&lt;/div&gt;	
+</code></pre>
+
+    <div class="column_6">
+      <p class="paragraph"><b>.alert_warning</b></p>
+      <div class="alert alert_warning">
+        <h2 class="alert__heading">warning</h2>
+        <p>Zomgoodness, you're in the danger zone!</p>
+      </div>
+    </div>
+
+    <pre
+      class="code-block column_6 code-snippet"><code class="html">&lt;div class="alert alert_warning"&gt;
+	&lt;h2 class="alert__heading"&gt;no worries&lt;/h2&gt;
+	&lt;p&gt;Zomgoodness...&lt;/p&gt;
+&lt;/div&gt;	
+</code></pre>
+
+    <div class="column_6">
+      <p class="paragraph"><b>.alert_success</b></p>
+      <div class="alert alert_success">
+        <h2 class="alert__heading">success</h2>
+        <p>Hooray!</p>
+      </div>
+    </div>
+
+    <pre
+      class="code-block column_6 code-snippet"><code class="html">&lt;div class="alert alert_success"&gt;
+	&lt;h2 class="alert__heading"&gt;success&lt;/h2&gt;
+	&lt;p&gt;Hooray!&lt;/p&gt;
+&lt;/div&gt;	
+</code></pre>
+
+    <div class="column_6">
+      <p class="paragraph"><b>.alert_light</b></p>
+      <div class="alert alert_light">
+        <h2 class="alert__heading">whatever</h2>
+        <p>A simple message</p>
+      </div>
+    </div>
+    <pre
+      class="code-block column_6 code-snippet"><code class="html">&lt;div class="alert alert_light"&gt;
+	&lt;h2 class="alert__heading"&gt;whatever&lt;/h2&gt;
+	&lt;p&gt;A simple message&lt;/p&gt;
+&lt;/div&gt;	
+</code></pre>
+
+    <div class="column_6">
+      <p class="paragraph"><b>.alert_dark</b></p>
+      <div class="alert alert_dark">
+        <h2 class="alert__heading">a thing</h2>
+        <p>A simple message</p>
+      </div>
+    </div>
+
+    <pre
+      class="code-block column_6 code-snippet"><code class="html">&lt;div class="alert alert_dark"&gt;
+	&lt;h2 class="alert__heading"&gt;a thing&lt;/h2&gt;
+	&lt;p&gt;A simple message&lt;/p&gt;
+&lt;/div&gt;	
+</code></pre>
+  </div>
+</SiteLayout>
