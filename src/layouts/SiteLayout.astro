@@ -1,8 +1,9 @@
 ---
 import PublicImports from "@/components/PublicImports.astro";
 import Header from "@components/Header.astro";
+import Sidebar from "@components/Sidebar.astro";
 import Footer from "@components/Footer.astro";
-
+import ScrollToTop from "@/components/ScrollToTop.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts.ts";
 const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 ---
@@ -17,22 +18,17 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
     <meta name="description" content={description} />
 
     <PublicImports />
-
-    <!--?php
-	// path for svgs (include before any files that use it)
-	$SVG_PATH = "/img/core-icons.svg";
-	$ICONIC_PATH = "/img/open-iconic-sprites.svg";
-	?-->
   </head>
 
   <body>
     <Header />
-    <slot />
+    <div class="container" role="presentation">
+      <Sidebar />
+      <main class="main global-padding">
+        <slot />
+      </main>
+    </div>
     <Footer />
-    <button
-      type="button"
-      id="scroll-to-top"
-      class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button
-    >
+    <ScrollToTop />
   </body>
 </html>
