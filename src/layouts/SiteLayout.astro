@@ -2,7 +2,9 @@
 import PublicImports from "@/components/PublicImports.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-console.log("Site Layout");
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts.ts";
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,7 +13,8 @@ console.log("Site Layout");
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1.0,width=device-width" />
 
-    <title>Nitro 2.0: Leerburg Styles Toolkit</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
 
     <PublicImports />
 
