@@ -1,10 +1,19 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
 
-import { SITE_TITLE, SVG_PATH, ICONIC_PATH } from "../consts.ts";
+import {
+  SITE_TITLE,
+  SVG_PATH,
+  ICONIC_PATH,
+  SIDEBAR_SECTIONS,
+} from "../consts.ts";
 ---
 
-<SiteLayout title={`Icon Libraries | ${SITE_TITLE}`} pagecss="icons.min.css">
+<SiteLayout
+  title={`Icon Libraries | ${SITE_TITLE}`}
+  pagecss="icons.min.css"
+  currentSection={SIDEBAR_SECTIONS.CONTENT}
+>
   <h1 class="heading-1">Icon Libraries</h1>
 
   <p class="paragraph">Various libraries from in-house and 3rd parties.</p>

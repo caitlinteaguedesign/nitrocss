@@ -4,11 +4,12 @@ import Header from "@components/Header.astro";
 import Sidebar from "@components/Sidebar.astro";
 import Footer from "@components/Footer.astro";
 import ScrollToTop from "@/components/ScrollToTop.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts.ts";
+import { SITE_TITLE, SITE_DESCRIPTION, SIDEBAR_SECTIONS } from "../consts.ts";
 const {
   title = SITE_TITLE,
   description = SITE_DESCRIPTION,
   pagecss,
+  currentSection = SIDEBAR_SECTIONS.INTRO,
 } = Astro.props;
 ---
 
@@ -30,7 +31,7 @@ const {
   <body>
     <Header />
     <div class="container" role="presentation">
-      <Sidebar />
+      <Sidebar current={currentSection} />
       <main class="main global-padding">
         <slot />
       </main>

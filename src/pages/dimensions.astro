@@ -1,9 +1,12 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
-import { SITE_TITLE } from "../consts.ts";
+import { SITE_TITLE, SIDEBAR_SECTIONS } from "../consts.ts";
 ---
 
-<SiteLayout title={`Spacing, Dimensions, & Scrollable | ${SITE_TITLE}`}>
+<SiteLayout
+  title={`Spacing, Dimensions, & Scrollable | ${SITE_TITLE}`}
+  currentSection={SIDEBAR_SECTIONS.LAYOUT}
+>
   <h1 class="heading-1">Spacing, Dimensions, &amp; Scrollable</h1>
   <p class="paragraph">
     Jump to section: <a class="link link_style-default" href="#spacing"
