@@ -1,0 +1,119 @@
+---
+import SiteLayout from "@layouts/SiteLayout.astro";
+import { SITE_TITLE, SVG_PATH, SIDEBAR_SECTIONS } from "../../consts.ts";
+---
+
+<SiteLayout
+  title={`Epicmodals | ${SITE_TITLE}`}
+  currentSection={SIDEBAR_SECTIONS.FEATURES}
+>
+  <h1 class="heading-1">Epicmodals</h1>
+
+  <p class="paragraph">
+    Modals is included with php, so find its file is located in <strong
+      >js/supermodals.js</strong
+    >. Content for modal examples located in <strong>includes/modals/</strong>.
+    Script for calling supermodals located at the bottom of this file.
+  </p>
+
+  <div class="bottom-spacing-1">
+    <button
+      type="button"
+      class="button button_color-default"
+      onclick="openDefault();"
+    >
+      Default Template
+      <span class="icon_inline">
+        <svg class="icon icon_fill" role="img" aria-label="Open modal">
+          <use href={`${SVG_PATH}#icon-doubleWindow`}></use>
+        </svg>
+      </span>
+    </button>
+
+    <button
+      type="button"
+      class="button button_color-theme"
+      onclick="openNitro();"
+    >
+      Nitro Template
+      <span class="icon_inline">
+        <svg class="icon icon_fill" role="img" aria-label="Open modal">
+          <use href={`${SVG_PATH}#icon-doubleWindow`}></use>
+        </svg>
+      </span>
+    </button>
+
+    <button
+      type="button"
+      class="button button_color-default"
+      onclick="openClassic();"
+    >
+      Classic Template
+      <span class="icon_inline">
+        <svg class="icon icon_fill" role="img" aria-label="Open modal">
+          <use href={`${SVG_PATH}#icon-doubleWindow`}></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  <pre
+    class="code-block code-snippet"><code class="html">&lt;!-- Calls the default template --&gt;
+&lt;button type="button" class="button button_color-default" onclick="openDefault();"&gt;
+	Default Template
+	&lt;!-- icon... --&gt;
+&lt;/button&gt;
+
+&lt;!-- Add custom templates to _custom.scss or custom folder in scss/, and to template section in epicmodals.php --&gt;
+&lt;button type="button" class="button button_color-theme" onclick="openNitro();"&gt;
+	Nitro Template
+	&lt;!-- icon... --&gt;
+&lt;/button&gt;	
+</code></pre>
+
+  <div class="alert alert_info bottom-spacing-1">
+    <h2 class="alert__heading">Authorship</h2><p class="paragraph">
+      Epicmodals and it's ancestor Supermodals were a collaborative effort
+      between two developers, but the bulk of the credit for the underlying
+      JavaScript goes to <span class="text_bold">Bobbie Jean Gustafson</span>.
+    </p>
+  </div>
+
+  <pre
+    class="code-block code-snippet"><code class="js">// calls to epicmodals can include options, like fadeIn, timers, templates, max-width, and more
+// can get and post data
+function openDefault()
+&lbrace;
+	$.get('&lt;path to modal content&gt;', function(data)&lbrace;
+		supermodal.fadeIn(&lbrace;content: data&rbrace;);
+	&rbrace;);
+&rbrace;
+
+function openNitro()
+&lbrace;
+	$.get('&lt;path to modal content&gt;', function(data)&lbrace;
+		supermodal.fadeIn(&lbrace;content: data, template: 'nitro'&rbrace;);
+	&rbrace;);
+&rbrace;
+</code></pre>
+</SiteLayout>
+
+<script is:inline>
+  function openDefault() {
+    $.get("/modals/Default.html", function (data) {
+      supermodal.fadeIn({ content: data });
+    });
+  }
+
+  function openNitro() {
+    $.get("/modals/Nitro.html", function (data) {
+      supermodal.fadeIn({ content: data, template: "nitro" });
+    });
+  }
+
+  function openClassic() {
+    $.get("/modals/Default.html", function (data) {
+      supermodal.fadeIn({ content: data, template: "classic" });
+    });
+  }
+</script>
