@@ -60,18 +60,18 @@ import {
   <pre
     class="code-block code-snippet"><code class="html">&lt;!-- basic icon --&gt;
 &lt;svg class="icon" role="img" aria-label="icon description"&gt;
-	&lt;use href="&lt;?php echo $SVG_PATH; ?&gt;#icon-name" /&gt;
+	&lt;use href="/images/core-icons.svg#icon-name" /&gt;
 &lt;/svg&gt;
 
 &lt;!-- with class for changing color of an icon (single color icons) --&gt;
 &lt;svg class="icon icon_fill" role="img" aria-label="icon description"&gt;
-	&lt;use href="&lt;?php echo $SVG_PATH; ?&gt;#icon-name" /&gt;
+	&lt;use href="/images/core-icons.svg#icon-name" /&gt;
 &lt;/svg&gt;
 
 &lt;!-- wrapper for icons placed within bodies of text --&gt;
 &lt;span class="icon_inline"&gt;
 	&lt;svg class="icon icon_fill" role="img" aria-label="icon description"&gt;
-		&lt;use href="&lt;?php echo $SVG_PATH; ?&gt;#icon-name" /&gt;
+		&lt;use href="/images/core-icons.svg#icon-name" /&gt;
 	&lt;/svg&gt;
 &lt;/span&gt;
 </code></pre>
@@ -81,7 +81,7 @@ import {
 
     <p class="paragraph page-icon__list-preceder">
       Icons made custom for Leerburg. Uses <b
-        >&lt;?php echo $SVG_PATH; ?&gt;#icon-name</b
+        >/images/core-icons.svg#icon-name</b
       >. Good for most general uses, like on buttons, but do poorly when too
       small or too big. Use at 16px at least, best is 24px - 32px (examples
       below are set at 24px). This library uses the file <b>core-icons.svg</b>.
