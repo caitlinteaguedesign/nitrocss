@@ -1,9 +1,12 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
-import { SITE_TITLE } from "../consts.ts";
+import { SITE_TITLE, SIDEBAR_SECTIONS } from "../consts.ts";
 ---
 
-<SiteLayout title={`Alerts | ${SITE_TITLE}`}>
+<SiteLayout
+  title={`Alerts | ${SITE_TITLE}`}
+  currentSection={SIDEBAR_SECTIONS.COMPONENTS}
+>
   <h1 class="heading-1">Alerts</h1>
 
   <p class="paragraph">

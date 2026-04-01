@@ -1,9 +1,12 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
-import { SITE_TITLE } from "../consts.ts";
+import { SITE_TITLE, SIDEBAR_SECTIONS } from "../consts.ts";
 ---
 
-<SiteLayout title={`Videos | ${SITE_TITLE}`}>
+<SiteLayout
+  title={`Videos | ${SITE_TITLE}`}
+  currentSection={SIDEBAR_SECTIONS.CONTENT}
+>
   <h1 class="heading-1">Videos</h1>
 
   <div class="grid">

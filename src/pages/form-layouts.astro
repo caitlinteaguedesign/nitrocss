@@ -1,9 +1,12 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
-import { SITE_TITLE } from "../consts.ts";
+import { SITE_TITLE, SIDEBAR_SECTIONS } from "../consts.ts";
 ---
 
-<SiteLayout title={`Form Layouts | ${SITE_TITLE}`}>
+<SiteLayout
+  title={`Form Layouts | ${SITE_TITLE}`}
+  currentSection={SIDEBAR_SECTIONS.LAYOUT}
+>
   <h1 class="heading-1">Form Layouts</h1>
 
   <p class="paragraph">
