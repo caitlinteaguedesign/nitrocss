@@ -1,9 +1,12 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
-import { SITE_TITLE } from "../consts.ts";
+import { SITE_TITLE, SIDEBAR_SECTIONS } from "../consts.ts";
 ---
 
-<SiteLayout title={`Flex | ${SITE_TITLE}`}>
+<SiteLayout
+  title={`Flex | ${SITE_TITLE}`}
+  currentSection={SIDEBAR_SECTIONS.LAYOUT}
+>
   <h1 class="heading-1">Flex Layouts</h1>
   <p class="paragraph">
     A few flex classes for simple scenarios. In some cases it is better to write
