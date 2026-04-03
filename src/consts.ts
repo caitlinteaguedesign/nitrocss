@@ -10,4 +10,4 @@ export const SIDEBAR_SECTIONS = {
   CONTENT: "Content",
   COMPONENTS: "Components",
   FEATURES: "Interactive Features",
-};
+} as const;

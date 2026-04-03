@@ -15,15 +15,18 @@
   "type": "module",
   "main": "dist/index.html",
   "scripts": {
+    "check": "astro check",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.2",
     "astro": "^6.1.1",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1",
-    "sass": "^1.98.0"
+    "sass": "^1.98.0",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "npm": "11.6.0",

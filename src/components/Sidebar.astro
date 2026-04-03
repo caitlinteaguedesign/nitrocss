@@ -1,5 +1,10 @@
 ---
 import { SVG_PATH, SIDEBAR_SECTIONS } from "../consts.ts";
+import type { SidebarSection } from "../types";
+
+interface Props {
+  current: SidebarSection;
+}
 
 const { current } = Astro.props;
 

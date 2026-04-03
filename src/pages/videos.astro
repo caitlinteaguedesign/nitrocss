@@ -53,39 +53,45 @@ import { SITE_TITLE, SIDEBAR_SECTIONS } from "../consts.ts";
         </video>
       </div>
 
-      <pre
-        class="code-block column_6 code-snippet"><code class="html">&lt;video controls poster="&lt;image-link&gt;" controlsList="nodownload"&gt;
-	&lt;source src="&lt;video-link&gt;.mp4" type="video/mp4"&gt;
+      <div class="column_6">
+        <pre
+          class="code-block code-snippet"><code class="html">&lt;video controls poster="&lt;image-link&gt;" controlsList="nodownload"&gt;
+	&lt;source src="&lt;video-source&gt;" type="video/mp4"&gt;
 	Your browser does not support the video tag.
 &lt;/video&gt;
 </code></pre>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="heading-2">Iframe Video</h2>
-    <p class="paragraph">
-      Iframe videos require a parent element with the class <b
-        >.iframe-wrapper</b
-      > aand class <b>.iframe</b> on the iframe itself.
-    </p>
-
-    <div class="grid">
-      <div class="column_6 video-frame">
-        <div class="iframe-wrapper">
-          <iframe
-            class="iframe"
-            src="//leerburg.com/embed.php?id=ed-toys"
-            frameborder="0"
-            scrolling="no"></iframe>
+        <div class="alert alert_caution top-spacing-1">
+          <p class="paragraph">
+            These notes on the state of HTML5 videoes are likely no longer
+            releavant. Check maintained documentation elsewhere for the most
+            up-to-date information.
+          </p>
         </div>
       </div>
-      <pre
-        class="code-block column_6 code-snippet"><code class="html">&lt;div class="iframe-wrapper"&gt;
-	&lt;iframe class="iframe" src="//leerburg.com/embed.php?id=ed-toys" frameborder="0" scrolling="no"&gt;
+    </div>
+
+    <section>
+      <h2 class="heading-2">Iframe Video</h2>
+      <p class="paragraph">
+        Iframe videos require a parent element with the class <b
+          >.iframe-wrapper</b
+        > aand class <b>.iframe</b> on the iframe itself.
+      </p>
+
+      <div class="grid">
+        <div class="column_6 video-frame">
+          <div class="iframe-wrapper">
+            <iframe class="iframe" src="//leerburg.com/embed.php?id=ed-toys"
+            ></iframe>
+          </div>
+        </div>
+        <pre
+          class="code-block column_6 code-snippet"><code class="html">&lt;div class="iframe-wrapper"&gt;
+	&lt;iframe class="iframe" src="&lt;video-source&gt;"&gt;
 	&lt;/iframe&gt;
 &lt;/div&gt;
 </code></pre>
-    </div>
+      </div>
+    </section>
   </section>
 </SiteLayout>
