@@ -1,6 +1,6 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
-import { SITE_TITLE, SIDEBAR_SECTIONS } from "../consts.ts";
+import { SITE_TITLE, SVG_PATH, SIDEBAR_SECTIONS } from "../consts.ts";
 ---
 
 <SiteLayout
@@ -40,15 +40,8 @@ import { SITE_TITLE, SIDEBAR_SECTIONS } from "../consts.ts";
 
     <div class="grid">
       <div class="column_6 video-frame">
-        <video
-          controls
-          poster="//d9twdiekqysl5.cloudfront.net/ed-toys/ed-toys-00001.png"
-          controlslist="nodownload"
-        >
-          <source
-            src="//d3vd9hr1vidhzq.cloudfront.net/ed-toys.mp4"
-            type="video/mp4"
-          />
+        <video controls controlslist="nodownload">
+          <source src="/video/pond.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -69,29 +62,47 @@ import { SITE_TITLE, SIDEBAR_SECTIONS } from "../consts.ts";
         </div>
       </div>
     </div>
+  </section>
+  <section>
+    <h2 class="heading-2">Iframe Video</h2>
+    <p class="paragraph">
+      Iframe videos require a parent element with the class <b
+        >.iframe-wrapper</b
+      > aand class <b>.iframe</b> on the iframe itself.
+    </p>
 
-    <section>
-      <h2 class="heading-2">Iframe Video</h2>
-      <p class="paragraph">
-        Iframe videos require a parent element with the class <b
-          >.iframe-wrapper</b
-        > aand class <b>.iframe</b> on the iframe itself.
-      </p>
-
-      <div class="grid">
-        <div class="column_6 video-frame">
-          <div class="iframe-wrapper">
-            <iframe class="iframe" src="//leerburg.com/embed.php?id=ed-toys"
-            ></iframe>
-          </div>
+    <div class="grid">
+      <div class="column_6 video-frame">
+        <div class="iframe-wrapper">
+          <iframe class="iframe" src="/video/pond.mp4"></iframe>
         </div>
-        <pre
-          class="code-block column_6 code-snippet"><code class="html">&lt;div class="iframe-wrapper"&gt;
+      </div>
+      <pre
+        class="code-block column_6 code-snippet"><code class="html">&lt;div class="iframe-wrapper"&gt;
 	&lt;iframe class="iframe" src="&lt;video-source&gt;"&gt;
 	&lt;/iframe&gt;
 &lt;/div&gt;
 </code></pre>
-      </div>
-    </section>
+    </div>
   </section>
+  <div class="alert alert_info max-width-400 top-spacing-1">
+    <h2 class="alert__heading">Video Credit</h2><p class="paragraph">
+      Video by <a
+        class="link link_style-default"
+        href="https://www.pexels.com/video/a-pond-with-trees-and-water-in-the-background-27686381/"
+        target="_blank"
+      >
+        AP Vibes from Pexels
+        <span class="icon_inline">
+          <svg
+            class="icon icon_fill"
+            role="img"
+            aria-label="Open in a new window"
+          >
+            <use href={`${SVG_PATH}#icon-arrow-box`}></use>
+          </svg>
+        </span>
+      </a>.
+    </p>
+  </div>
 </SiteLayout>
