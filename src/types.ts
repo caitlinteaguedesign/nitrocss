@@ -1,4 +1,4 @@
-import { SIDEBAR_SECTIONS } from "./consts";
+import { SIDEBAR_SECTIONS } from "@/consts";
 
 export type User = {
   id: number;
