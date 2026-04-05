@@ -19,7 +19,7 @@
     {
       "type": "shell",
       "label": "sass: watch",
-      "command": "sass --watch --stop-on-error --no-source-map public/nitro-css/project:public/nitro-css/dev/",
+      "command": "sass --watch --stop-on-error public/nitro-css/project:public/nitro-css/dev",
       "group": "build",
       "problemMatcher": []
     }
