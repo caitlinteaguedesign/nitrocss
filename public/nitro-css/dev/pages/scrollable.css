@@ -1,0 +1,8 @@
+.scroll-example {
+  background-color: #eaeaea;
+  border: 1px solid #cccccc;
+}
+.scroll-example__content {
+  padding: 1.1875em;
+  font-size: 0.8em;
+}

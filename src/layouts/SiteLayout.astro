@@ -34,7 +34,11 @@ const {
     <PublicImports />
 
     <!-- page stylesheet, optional -->
-    {pagecss && <link rel="stylesheet" href={`/styles/pages/${pagecss}`} />}
+    {
+      pagecss && (
+        <link rel="stylesheet" href={`/nitro-css/build/pages/${pagecss}`} />
+      )
+    }
   </head>
 
   <body>
