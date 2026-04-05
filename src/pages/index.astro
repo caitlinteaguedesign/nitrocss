@@ -147,8 +147,9 @@ import { SVG_PATH } from "@/consts";
   <section>
     <h2 class="heading-2">Build and Debug</h2>
     <p class="paragraph">
-      Files compiled for production use can go in <b>build</b> directory. Files that
-      are used for testing Sass results go in the <b>debug</b> directory.
+      Files compiled and minified for production can go in the <b>build</b> directory.
+      Optionally, files that are uncompressed and being watched during development
+      can go in the <b>dev</b> directory.
     </p>
     <ul class="list list_style-disc">
       <li>
@@ -158,7 +159,7 @@ import { SVG_PATH } from "@/consts";
         </ul>
       </li>
       <li>
-        <b>/debug/</b>
+        <b>/dev/</b>
         <ul class="list list_style-disc">
           <li><b>global.css</b></li>
         </ul>
