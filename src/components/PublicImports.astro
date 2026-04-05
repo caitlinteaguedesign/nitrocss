@@ -1,5 +1,9 @@
+---
+const cssPath = import.meta.env.PUBLIC_CSS_PATH;
+---
+
 <!-- main stylesheet built from sass -->
-<link rel="stylesheet" href="/nitro-css/build/global.css" />
+<link rel="stylesheet" href={`/${cssPath}/global.css`} />
 
 <!-- jQuery-ui styles -->
 <link rel="stylesheet" href="/scripts/jquery-ui/jquery-ui.min.css" />
