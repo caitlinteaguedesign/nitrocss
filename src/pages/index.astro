@@ -70,6 +70,13 @@ import { SVG_PATH } from "@/consts";
           global.scss files might look like the code on the right.
         </p>
 
+        <div class="alert alert_caution bottom-spacing-1">
+          <p class="paragraph">
+            In contemporary practice, <b>"index"</b> would be the better name for
+            the entry file into a folder, rather than <b>"_bootstrap"</b>.
+          </p>
+        </div>
+
         <ul class="list list_style-disc">
           <li>
             <b>/project/global.scss</b> (compiles general framework css, the theme,
@@ -92,7 +99,8 @@ import { SVG_PATH } from "@/consts";
             and any helpers from the framework)
           </li>
           <li>
-            <b>/project/commerce/</b>
+            <b>/project/commerce/</b> (assorted individual page files that could be
+            organized in a <b>pages</b> folder or in the relevant section folder)
             <ul class="list list_style-disc">
               <li><b>_department.scss</b></li>
               <li><b>_category.scss</b></li>
@@ -104,7 +112,8 @@ import { SVG_PATH } from "@/consts";
             any helpers from the framework)
           </li>
           <li>
-            <b>/project/themes/</b> (contains project specific variables)
+            <b>/project/themes/</b> (one project can have different themes for different
+            sectons or to enable different modes)
             <ul class="list list_style-disc">
               <li><b>_main.scss</b></li>
               <li><b>_admin.scss</b></li>
@@ -145,26 +154,40 @@ import { SVG_PATH } from "@/consts";
   </section>
 
   <section>
-    <h2 class="heading-2">Build and Debug</h2>
-    <p class="paragraph">
-      Files compiled and minified for production can go in the <b>build</b> directory.
-      Optionally, files that are uncompressed and being watched during development
-      can go in the <b>dev</b> directory.
-    </p>
-    <ul class="list list_style-disc">
-      <li>
-        <b>/build/</b>
+    <h2 class="heading-2">Output</h2>
+    <div class="grid">
+      <div class="column_6">
+        <p class="paragraph">
+          Files compiled and minified for production should go into the relevant <b
+            >build</b
+          > directory. Optionally, files that are uncompressed and being watched during
+          development can go in a separate <b>dev</b> directory.
+        </p>
+
         <ul class="list list_style-disc">
-          <li><b>global.min.css</b></li>
+          <li>
+            <b>/build/</b>
+            <ul class="list list_style-disc">
+              <li><b>global.min.css</b></li>
+            </ul>
+          </li>
+          <li>
+            <b>/dev/</b>
+            <ul class="list list_style-disc">
+              <li><b>global.css</b></li>
+            </ul>
+          </li>
         </ul>
-      </li>
-      <li>
-        <b>/dev/</b>
-        <ul class="list list_style-disc">
-          <li><b>global.css</b></li>
-        </ul>
-      </li>
-    </ul>
+      </div>
+      <div class="column_6 alert alert_caution bottom-spacing-1">
+        <p class="paragraph">
+          The original version of this project kept all of the scss and output
+          files together in a <b>nitrocss</b> directory, kept amongst php view files.
+          In this docs site, <b>nitrocss</b> source files are maintained separately,
+          with the output files placed into the <b>public/</b> folder.
+        </p>
+      </div>
+    </div>
   </section>
 
   <section>
