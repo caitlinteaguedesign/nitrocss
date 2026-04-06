@@ -3,6 +3,18 @@ header {
   z-index: 5;
   box-shadow: 0px 1px 8px 0px rgba(1, 10, 6, 0.75);
 
+  .banner {
+    padding: 1rem;
+    background-color: #e2ffbe;
+    display: flex;
+    justify-content: center;
+
+    .paragraph {
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+
   .title {
     text-align: center;
     font-family: $font-headings;
