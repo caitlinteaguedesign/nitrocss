@@ -141,19 +141,19 @@ function openNitro()
 
 <script is:inline>
   function openDefault() {
-    $.get("/modals/Default.html", function (data) {
+    $.get("../modals/Default.html", function (data) {
       supermodal.fadeIn({ content: data });
     });
   }
 
   function openNitro() {
-    $.get("/modals/Nitro.html", function (data) {
+    $.get("../modals/Nitro.html", function (data) {
       supermodal.fadeIn({ content: data, template: "nitro" });
     });
   }
 
   function openClassic() {
-    $.get("/modals/Default.html", function (data) {
+    $.get("../modals/Default.html", function (data) {
       supermodal.fadeIn({ content: data, template: "classic" });
     });
   }
