@@ -7,6 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, SIDEBAR_SECTIONS } from "@/consts.ts";
 import type { SidebarSection } from "@/types.ts";
 
+const baseUrl = import.meta.env.BASE_URL;
 const cssPath = import.meta.env.PUBLIC_CSS_PATH;
 
 interface Props {
@@ -36,7 +37,11 @@ const {
     <PublicImports />
 
     <!-- page stylesheet, optional -->
-    {pagecss && <link rel="stylesheet" href={`/${cssPath}/pages/${pagecss}`} />}
+    {
+      pagecss && (
+        <link rel="stylesheet" href={`${baseUrl}${cssPath}/pages/${pagecss}`} />
+      )
+    }
   </head>
 
   <body>

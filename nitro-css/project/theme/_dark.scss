@@ -1,11 +1,11 @@
 // ====================================
 // paths
-$IMG_PATH: "/img/";
+$IMG_PATH: "../img/";
 
 // ====================================
 // colors
-$default-text-color: #d0e7e1; 
-$link-color: #df7e00; 
+$default-text-color: #d0e7e1;
+$link-color: #df7e00;
 
 // ====================================
 // background and layout
@@ -23,16 +23,16 @@ $total-columns: 12;
 $google-fonts: "Open+Sans:400,700|Barlow+Semi+Condensed:400,700|Raleway:400,400i,700,700i|Ubuntu+Mono:400,400i";
 
 // set fonts
-$font-headings: 'Barlow Semi Condensed', sans-serif;
-$font-body: 'Raleway', sans-serif;
-$font-mono: 'Ubuntu Mono', monospace;
+$font-headings: "Barlow Semi Condensed", sans-serif;
+$font-body: "Raleway", sans-serif;
+$font-mono: "Ubuntu Mono", monospace;
 
 // font settings
 
 // requires modual scale 3rd party library
 $modularscale: (
   base: 1em,
-  ratio: 1.25
+  ratio: 1.25,
 );
 
 // typically 1em when site is based on 1em = 16px
@@ -49,14 +49,14 @@ $gutters: $standard-text-height / 16px * 1em;
 $table-caption-bg: orange;
 $table-caption-color: white;
 
-$table-header-bg: #ffffff; 
-$table-header-color: #75583f; 
+$table-header-bg: #ffffff;
+$table-header-color: #75583f;
 
-$table-row-even: #fae6c1; 
-$table-row-odd: #e0c289; 
+$table-row-even: #fae6c1;
+$table-row-odd: #e0c289;
 
 $table-dull: #585551;
 $table-emphasize: #df9b35;
 
-$table-heading-border: 1px solid #bea792;  
-$table-cell-border: 1px dashed #aa9266;  
+$table-heading-border: 1px solid #bea792;
+$table-cell-border: 1px dashed #aa9266;

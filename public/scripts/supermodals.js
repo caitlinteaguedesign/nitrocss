@@ -17,7 +17,7 @@ var supermodal = (function () {
     '<div id="supermodal-content" class="supermodal-content"></div>',
   );
   $close = $(
-    '<button type="button" id="supermodal-close" class="supermodal-close"><svg class="icon icon_fill" role="img" aria-label="press to close modal"><use href="/img/core-icons.svg#icon-exMark"></use></svg></button>',
+    '<button type="button" id="supermodal-close" class="supermodal-close"><svg class="icon icon_fill" role="img" aria-label="press to close modal"><use href="../img/core-icons.svg#icon-exMark"></use></svg></button>',
   );
 
   $modal.hide();

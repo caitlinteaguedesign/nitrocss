@@ -2,6 +2,8 @@
 import { SVG_PATH, SIDEBAR_SECTIONS } from "@/consts.ts";
 import type { SidebarSection } from "@/types.ts";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 interface Props {
   current: SidebarSection;
 }
@@ -9,45 +11,45 @@ interface Props {
 const { current } = Astro.props;
 
 const introLinks = [
-  { name: "File Structure", path: "/" },
-  { name: "Changelog", path: "/changelog" },
-  { name: "Quick Start Guide", path: "/quickstart" },
+  { name: "File Structure", path: `${baseUrl}` },
+  { name: "Changelog", path: `${baseUrl}changelog` },
+  { name: "Quick Start Guide", path: `${baseUrl}quickstart` },
 ];
 
 const layoutLinks = [
-  { name: "Flex Layouts", path: "/flex" },
-  { name: "Form Layouts", path: "/form-layouts" },
-  { name: "Grid System", path: "/grid" },
-  { name: "Spacing, Positioning & Dimensions", path: "/dimensions" },
+  { name: "Flex Layouts", path: `${baseUrl}flex` },
+  { name: "Form Layouts", path: `${baseUrl}form-layouts` },
+  { name: "Grid System", path: `${baseUrl}grid` },
+  { name: "Spacing, Positioning & Dimensions", path: `${baseUrl}dimensions` },
 ];
 
 const contentLinks = [
-  { name: "Icons", path: "/icons" },
-  { name: "Links", path: "/links" },
-  { name: "Typography", path: "/typography" },
-  { name: "Videos", path: "/videos" },
+  { name: "Icons", path: `${baseUrl}icons` },
+  { name: "Links", path: `${baseUrl}links` },
+  { name: "Typography", path: `${baseUrl}typography` },
+  { name: "Videos", path: `${baseUrl}videos` },
 ];
 
 const componentLinks = [
-  { name: "Alerts", path: "/alerts" },
-  { name: "Buttons", path: "/buttons" },
-  { name: "Form Fields", path: "/forms" },
-  { name: "Lists", path: "/lists" },
-  { name: "Progress Bars", path: "/progress" },
-  { name: "Tables", path: "/tables" },
-  { name: "Tabs", path: "/tabs" },
+  { name: "Alerts", path: `${baseUrl}alerts` },
+  { name: "Buttons", path: `${baseUrl}buttons` },
+  { name: "Form Fields", path: `${baseUrl}forms` },
+  { name: "Lists", path: `${baseUrl}lists` },
+  { name: "Progress Bars", path: `${baseUrl}progress` },
+  { name: "Tables", path: `${baseUrl}tables` },
+  { name: "Tabs", path: `${baseUrl}tabs` },
 ];
 
 const featureLinks = [
-  { name: "Accordions", path: "/features/accordions" },
-  { name: "Date & Time Pickers", path: "/features/calendars" },
-  { name: "Epicmodals", path: "/features/epicmodals" },
-  { name: "Parsley.js", path: "/features/parsley" },
-  { name: "Read More & Show Less", path: "/features/readmore" },
-  { name: "Scrollable", path: "/features/scrollable" },
-  { name: "Scroll to Top", path: "/features/scrolltotop" },
-  { name: "Tablesorter", path: "/features/tablesorter" },
-  { name: "Tooltips", path: "/features/tooltips" },
+  { name: "Accordions", path: `${baseUrl}features/accordions` },
+  { name: "Date & Time Pickers", path: `${baseUrl}features/calendars` },
+  { name: "Epicmodals", path: `${baseUrl}features/epicmodals` },
+  { name: "Parsley.js", path: `${baseUrl}features/parsley` },
+  { name: "Read More & Show Less", path: `${baseUrl}features/readmore` },
+  { name: "Scrollable", path: `${baseUrl}features/scrollable` },
+  { name: "Scroll to Top", path: `${baseUrl}features/scrolltotop` },
+  { name: "Tablesorter", path: `${baseUrl}features/tablesorter` },
+  { name: "Tooltips", path: `${baseUrl}features/tooltips` },
 ];
 
 const sections = [
