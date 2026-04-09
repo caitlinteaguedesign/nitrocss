@@ -16,7 +16,7 @@
   "main": "dist/index.html",
   "scripts": {
     "check": "astro check",
-    "sass:watch": "sass --watch --stop-on-error nitro-css/project:public/styles/dev",
+    "sass:watch": "sass --watch --stop-on-error nitro-css/project:public/styles",
     "dev": "concurrently -n vite,sass -c gray,cyan \"astro dev\" \"npm run sass:watch\"",
     "sass:build": "sass --stop-on-error --no-source-map --style=compressed nitro-css/project:public/styles",
     "build": "npm run sass:build && astro build",
