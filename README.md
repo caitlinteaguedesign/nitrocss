@@ -1,6 +1,6 @@
 # NitroCSS
 
-A homebrew CSS Framework created to enable consistent UI design across multiple internal and external web apps within a single organization.
+A homebrew CSS framework created to enable consistent UI design across multiple internal and external web apps within a single organization.
 
 View implementation details by visting the [NitroCSS docs site](https://caitlinteague.com/archive/nitro).
 
