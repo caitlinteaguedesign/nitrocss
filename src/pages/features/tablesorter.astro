@@ -176,40 +176,14 @@ const users: User[] = await response.json();
    &rbrace;).bind('sortEnd', function() &lbrace;
       $(".tablesorter-headerUnSorted .table-sortable__icon")
          .find("use")
-         .attr("href", "/img/core-icons.svg#icon-sort-unsorted");
+         .attr("href", "/images/core-icons.svg#icon-sort-unsorted");
       $(".tablesorter-headerAsc .table-sortable__icon")
          .find("use")
-         .attr("href", "/img/core-icons.svg#icon-sort-up");
+         .attr("href", "/images/core-icons.svg#icon-sort-up");
       $(".tablesorter-headerDesc .table-sortable__icon")
          .find("use")
-         .attr("href", "/img/core-icons.svg#icon-sort-down");
+         .attr("href", "/images/core-icons.svg#icon-sort-down");
    &rbrace;);
 &rbrace;);
 </code></pre>
 </SiteLayout>
-
-<script is:inline>
-  // basic table sorting setup; use var to modify individual table settings
-  $(document).ready(function () {
-    $(".table-sortable")
-      .tablesorter({
-        headers: {
-          ".table-sortable__sorter-false": {
-            sorter: false,
-          },
-        },
-      })
-      .bind("sortEnd", function () {
-        $(".tablesorter-headerUnSorted .table-sortable__icon")
-          .find("use")
-          .attr("href", "../img/core-icons.svg#icon-sort-unsorted");
-        $(".tablesorter-headerAsc .table-sortable__icon")
-          .find("use")
-          .attr("href", "../img/core-icons.svg#icon-sort-up");
-        $(".tablesorter-headerDesc .table-sortable__icon")
-          .find("use")
-          .attr("href", "../img/core-icons.svg#icon-sort-down");
-      });
-  });
-</script>
-<script is:inline src="../scripts/jquery.tablesorter.min.js"></script>
