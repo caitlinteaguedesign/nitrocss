@@ -1,3 +1,6 @@
+// ASTRO HELPER
+const baseUrl = "/archive/nitro/";
+
 // =========================================================================
 // BASIC ACCORDION
 $(document).ready(function () {
@@ -220,13 +223,13 @@ $(document).ready(function () {
     .bind("sortEnd", function () {
       $(".tablesorter-headerUnSorted .table-sortable__icon")
         .find("use")
-        .attr("href", "../img/core-icons.svg#icon-sort-unsorted");
+        .attr("href", `${baseUrl}img/core-icons.svg#icon-sort-unsorted`);
       $(".tablesorter-headerAsc .table-sortable__icon")
         .find("use")
-        .attr("href", "../img/core-icons.svg#icon-sort-up");
+        .attr("href", `${baseUrl}img/core-icons.svg#icon-sort-up`);
       $(".tablesorter-headerDesc .table-sortable__icon")
         .find("use")
-        .attr("href", "../img/core-icons.svg#icon-sort-down");
+        .attr("href", `${baseUrl}img/core-icons.svg#icon-sort-down`);
     });
 });
 
@@ -234,19 +237,19 @@ $(document).ready(function () {
 // MODAL EXAMPLES
 
 function openDefault() {
-  $.get("../modals/Default.html", function (data) {
+  $.get(`${baseUrl}modals/Default.html`, function (data) {
     supermodal.fadeIn({ content: data });
   });
 }
 
 function openNitro() {
-  $.get("../modals/Nitro.html", function (data) {
+  $.get(`${baseUrl}modals/Nitro.html`, function (data) {
     supermodal.fadeIn({ content: data, template: "nitro" });
   });
 }
 
 function openClassic() {
-  $.get("../modals/Default.html", function (data) {
+  $.get(`${baseUrl}modals/Default.html`, function (data) {
     supermodal.fadeIn({ content: data, template: "classic" });
   });
 }
