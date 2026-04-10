@@ -1,3 +1,5 @@
+// ========================================
+// SUPERMODALS
 var supermodal = (function () {
   var method = {},
     $overlay,
@@ -9,6 +11,9 @@ var supermodal = (function () {
   /*
    *  2020 update: BEM css
    */
+  // ASTRO HELPER
+  const baseUrl = "/archive/nitro/";
+
   $overlay = $(
     '<div id="supermodal-overlay" class="supermodal-overlay"></div>',
   );
@@ -17,7 +22,7 @@ var supermodal = (function () {
     '<div id="supermodal-content" class="supermodal-content"></div>',
   );
   $close = $(
-    '<button type="button" id="supermodal-close" class="supermodal-close"><svg class="icon icon_fill" role="img" aria-label="press to close modal"><use href="../img/core-icons.svg#icon-exMark"></use></svg></button>',
+    `<button type="button" id="supermodal-close" class="supermodal-close"><svg class="icon icon_fill" role="img" aria-label="press to close modal"><use href="${baseUrl}img/core-icons.svg#icon-exMark"></use></svg></button>`,
   );
 
   $modal.hide();
